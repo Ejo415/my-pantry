@@ -1,3 +1,4 @@
 class Item < ApplicationRecord
-  belongs_to :kitchen
+  has_many :inventories
+  has_many :kitchens through: :inventories
 end
