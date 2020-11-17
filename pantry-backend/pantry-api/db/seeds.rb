@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Item.create(name: "Garlic Powder", category: "Spice",)
+Item.create(name: "Rotisserie Chicken", category: "Poultry")
+Item.create(name: "Fresh Basil", category: "Herbs")
+Item.create(name: "San Marzano Tomatoes", category: "Canned Produce")
+Item.create(name: "Table Salt", category: "Salt")
+Item.create(name: "Milk", category: "Dairy")
+Item.create(name: "Kosher Salt", category: "Salt")
+
+Inventory.create(kitchen_id: 1 , item_id: 2)
+Inventory.create(kitchen_id: 1 , item_id: 7)
+Inventory.create(kitchen_id: 1 , item_id: 8)
+Inventory.create(kitchen_id: 2 , item_id: 4)
+Inventory.create(kitchen_id: 2 , item_id: 7)
+Inventory.create(kitchen_id: 2 , item_id: 2)
