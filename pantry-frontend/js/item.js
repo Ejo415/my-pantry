@@ -16,13 +16,11 @@ class Item{
                Add to
              </button>
              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-               <button class="dropdown-item" type="button">TEST</button>
-            
+             ${Pantry.all.map(pantry =>  `<button class="dropdown-item" type="button">${pantry.name}</button>`).join("")}
              </div>
            </div></li>
-        
-       </ul>`)
-       }
+        </ul>`
+        )}
 
        static htmlifyItem(){
         return Item.all.map(item=> item.htmlifyItem()).join("")
@@ -33,7 +31,6 @@ class Item{
         const itemList = document.getElementById("item-container") 
         itemList.innerHTML = ""
         itemList.innerHTML = Item.htmlifyItem()
-  
     }
 
 
