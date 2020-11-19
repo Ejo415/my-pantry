@@ -25,10 +25,10 @@
                 <div class="card text-center" style="width: 18rem;">
                     <div class="card-body">
                       <h5 class="card-title">Home</h5>
-                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#kitchen-inventory" aria-expanded="false" aria-controls="collapseExample">
                         Pantry
                       </button>
-                      <div class="collapse" id="collapseExample">
+                      <div class="collapse" id="kitchen-inventory">
                         <div class="card card-body">
                           <li>Item1 <button type="button" class="btn btn-outline-danger btn-sm" id="removeItem">Remove</button></li>
                         </div>
@@ -51,6 +51,7 @@
                     <input type="text"/>   
                     <input type="Submit">
                 </form>
+                <div id="item-container">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Milk - Dairy<div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,6 +64,7 @@
                       </div></li>
                    
                   </ul>
+                </div>
             </div>
           </div>
         </div>
@@ -73,6 +75,7 @@
     </div>
     <script src="js/api.js"></script>
     <script src="js/pantry.js"></script>
+    <script src="js/item.js"></script>
     <script src="js/index.js"></script>
     
     
