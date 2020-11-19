@@ -4,7 +4,7 @@ const api = new ApiService();
 
 function init() {
     renderKitchens()
-    renderItems()
+    
 }
 
 async function renderKitchens(){
@@ -14,6 +14,7 @@ async function renderKitchens(){
       console.log(test)
     }
     Pantry.renderKitchens()
+    renderItems()
 }
 
 async function renderItems(){
