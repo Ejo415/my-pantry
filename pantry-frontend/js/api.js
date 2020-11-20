@@ -27,8 +27,7 @@ class ApiService{
         });
         const response = await res.json()
         return response
-        
-      }
+     }
 
       async addItem(iData) {
         const res = await fetch(this.baseUrl+"/items", {
