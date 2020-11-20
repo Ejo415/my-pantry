@@ -32,7 +32,7 @@ class Pantry {
 
   
 
-    static htmlifyKitchen(){
+    static htmlifyKitchens(){
       return Pantry.all.map(kitchen=> kitchen.htmlifyKitchen()).join("")
     }
 
@@ -43,7 +43,7 @@ class Pantry {
         //clear kitchen side and replace
         const kitchenCards = document.getElementById("kitchen-container") 
         kitchenCards.innerHTML = ""
-        kitchenCards.innerHTML = Pantry.htmlifyKitchen()
+        kitchenCards.innerHTML = Pantry.htmlifyKitchens()
 
     }
 
