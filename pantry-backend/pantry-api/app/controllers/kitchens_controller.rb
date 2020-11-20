@@ -6,7 +6,7 @@ class KitchensController < ApplicationController
     end
 
     def create
-    byebug
+   # byebug
         @kitchens = Kitchen.new(kit_params)
         if @kitchens.save
             render :json => @kitchens, include: :items
