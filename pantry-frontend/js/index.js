@@ -12,7 +12,7 @@ function bindEventListeners(){
     const newItemForm = document.getElementById('new-item')
 
     newKitchenForm.addEventListener('submit', addKitchen);
-  //  newItemForm.addEventListener('submit', addItem);
+    newItemForm.addEventListener('submit', addItem);
 }
 
 
@@ -47,6 +47,19 @@ async function addKitchen(e) {
     e.target.reset();
     Pantry.renderKitchens()
  }
+
+ async function addItem(e) {
+  e.preventDefault();
+  const input1 = e.target.itemName.value;
+  const input2 = e.target.category.value;
+  const iData = {item_name: input1, category:input2 }
+  console.log(iData)
+  const res = await api.addItem(iData);
+  console.log(res)
+  new Item(res)
+  e.target.reset();
+  Item.renderItem()
+}
 
 
 init()
