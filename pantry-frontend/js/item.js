@@ -22,7 +22,7 @@ class Item{
         </ul>`
         )}
 
-    static htmlifyItem(){
+    static htmlifyItems(){
         return Item.all.map(item=> item.htmlifyItem()).join("")
       }
 
@@ -30,7 +30,7 @@ class Item{
         //clear item side and replace
         const itemList = document.getElementById("item-container") 
         itemList.innerHTML = ""
-        itemList.innerHTML = Item.htmlifyItem()
+        itemList.innerHTML = Item.htmlifyItems()
     }
 
 
