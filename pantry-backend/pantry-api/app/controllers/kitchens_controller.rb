@@ -10,7 +10,6 @@ class KitchensController < ApplicationController
         @kitchens = Kitchen.new(kit_params)
         if @kitchens.save
             render :json => @kitchens, include: :items
-        end
     end
 end
 
@@ -18,4 +17,6 @@ private
 
 def kit_params
     params.require(:kitchen).permit(:name)
+end
+
 end
