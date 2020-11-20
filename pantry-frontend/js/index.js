@@ -42,10 +42,10 @@ async function addKitchen(e) {
     const kData = {name: input}
     console.log(kData)
     const res = await api.addKitchen(kData);
-    if (res.ok) {
-    newKitchenForm();
+    console.log(res)
+    new Pantry(res)
     e.target.reset();
-  }
+    Pantry.renderKitchens()
  }
 
 
