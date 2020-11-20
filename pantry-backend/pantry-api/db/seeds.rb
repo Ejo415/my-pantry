@@ -21,3 +21,6 @@ Inventory.create(kitchen_id: 1 , item_id: 8)
 Inventory.create(kitchen_id: 2 , item_id: 4)
 Inventory.create(kitchen_id: 2 , item_id: 7)
 Inventory.create(kitchen_id: 2 , item_id: 2)
+
+Kitchen.create(name: "Home")
+Kitchen.create(name: "Mountain House")
