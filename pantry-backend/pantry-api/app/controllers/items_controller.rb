@@ -5,4 +5,18 @@ class ItemsController < ApplicationController
 
         render json: @items
     end
+
+    def create
+        # byebug
+             @items = Item.new(kit_params)
+             if @items.save
+                 render json: @items
+         end
+     end
+
+     def kit_params
+        params.require(:item).permit(:item_name, :category)
+    end
+    
+    
 end
