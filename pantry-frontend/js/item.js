@@ -22,11 +22,11 @@ class Item{
         </ul>`
         )}
 
-       static htmlifyItem(){
+    static htmlifyItem(){
         return Item.all.map(item=> item.htmlifyItem()).join("")
       }
 
-      static renderItem(){
+    static renderItem(){
         //clear item side and replace
         const itemList = document.getElementById("item-container") 
         itemList.innerHTML = ""
