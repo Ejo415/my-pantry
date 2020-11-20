@@ -27,6 +27,7 @@ class ApiService{
         });
         const response = await res.json()
         return response
+        
       }
 
       async addItem(iData) {
