@@ -32,9 +32,14 @@ class ApiService{
       async addItem(iData) {
         const res = await fetch(this.baseUrl+"/items", {
           method: 'POST',
-          body: iData,
+          headers: {
+              'Content-type':'application/json',
+              'Accept':'application/json'
+            },
+          body: JSON.stringify(iData)
         });
-        return res;
+        const response = await res.json()
+        return response
       }
 
       async invAdd(invData) {
