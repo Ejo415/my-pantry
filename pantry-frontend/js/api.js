@@ -19,9 +19,14 @@ class ApiService{
     async addKitchen(kData) {
         const res = await fetch(this.baseUrl+"/kitchens", {
           method: 'POST',
-          body: kData,
+          headers: {
+              'Content-type':'application/json',
+              'Accept':'application/json'
+            },
+          body: JSON.stringify(kData)
         });
-        return res;
+        const response = await res.json()
+        return response
       }
 
       async addItem(iData) {
@@ -40,7 +45,7 @@ class ApiService{
         return res;
       }
 
-      async addItem(InvData) {
+      async invRemove(InvData) {
         const res = await fetch(this.baseUrl+"/inventories", {
           method: 'DELETE',
           body: InvData,
