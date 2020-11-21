@@ -7,14 +7,15 @@ class InventoriesController < ApplicationController
     end
 
     def create 
+        #byebug
         @inventories = Inventory.new(inv_params)
-        if inv.save 
+        if @inventories.save 
             render :json => @inventories, include:  [:kitchen, :item], except: [:created_at, :updated_at, :quantity]
         end
     end
 
     def destroy
-        @inv.destroy
+        Inventory.all.find_by_id(params[:id]).delete
     end
 
 
