@@ -15,7 +15,5 @@ class Inventory {
    return Inventory.all.find((inv)=>{
         return inv.kitchen_id === kNum && inv.item_id === iNum 
      }).id
-
-     
-   }
+    }
 }
