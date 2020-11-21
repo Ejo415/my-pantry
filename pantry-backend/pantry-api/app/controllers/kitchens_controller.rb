@@ -2,7 +2,7 @@ class KitchensController < ApplicationController
     def index 
         kitchens = Kitchen.all 
 
-        render :json => kitchens, include: :items
+        render :json => kitchens, include: [:items, :inventories]
     end
 
     def create
