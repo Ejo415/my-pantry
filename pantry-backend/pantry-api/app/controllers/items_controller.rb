@@ -3,7 +3,8 @@ class ItemsController < ApplicationController
     def index 
         @items = Item.all 
 
-        render json: @items
+        render json: @items, include: :inventories
+        
     end
 
     def create
