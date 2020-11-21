@@ -16,6 +16,12 @@ class ApiService{
         return data
     }
 
+    async getInvInfo(){
+      const resp = await fetch(this.baseUrl+"/inventories")
+      const data = await resp.json()
+      return data
+  }
+
     async addKitchen(kData) {
         const res = await fetch(this.baseUrl+"/kitchens", {
           method: 'POST',
@@ -45,17 +51,28 @@ class ApiService{
       async invAdd(invData) {
         const res = await fetch(this.baseUrl+"/inventories", {
           method: 'POST',
-          body: InvData,
+          headers: {
+              'Content-type':'application/json',
+              'Accept':'application/json'
+            },
+          body: JSON.stringify(invData)
         });
-        return res;
+        const response = await res.json()
+        return response
       }
 
-      async invRemove(InvData) {
-        const res = await fetch(this.baseUrl+"/inventories", {
+      async invRemove(sendData) {
+        const res = await fetch(this.baseUrl+`/inventories/${sendData.id}`, {
           method: 'DELETE',
-          body: InvData,
-        });
-        return res;
-      }
+          headers: {
+            'Content-type':'application/json',
+            'Accept':'application/json'
+          },
+        body: JSON.stringify(sendData)
+      });
+     // const response = await res.json()
+    // return response
+    }
+
 
 }
