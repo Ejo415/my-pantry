@@ -9,21 +9,24 @@ class Pantry {
         this.item = pant.items
         this.category = pant.category
         this.item_name = pant.item_name
+        this.inventories = pant.inventories
         Pantry.all.push(this)
     }
+
+    
 
 
     htmlifyKitchen(){
         return(`
         <div class="card text-center" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">${this.name}</h5>
+          <h5 class="card-title" id=${this.id}>${this.name}</h5>
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#kitchen-inventory-${this.id}" aria-expanded="false" aria-controls="collapseExample">
             Pantry
           </button>
           <div class="collapse" id="kitchen-inventory-${this.id}">
-            <div class="card card-body">
-               ${this.item.map(item =>  `<li> ${item.item_name} - ${item.category}<br><button type="button" class="btn btn-outline-danger btn-sm">Remove</button></li> `).join("")} 
+            <div class="card card-body" id=${this.id}>
+               ${this.item.map(item =>  `<li> ${item.item_name} - ${item.category}<br><button type="button" id=${item.id} class="btn btn-outline-danger btn-sm removeInvButton">Remove</button></li> `).join("")} 
             </div>
           </div>
         </div>
