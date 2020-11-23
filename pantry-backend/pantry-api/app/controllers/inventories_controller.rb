@@ -15,6 +15,7 @@ class InventoriesController < ApplicationController
     end
 
     def destroy
+       
         Inventory.all.find_by_id(params[:id]).delete
     end
 
