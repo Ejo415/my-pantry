@@ -17,6 +17,7 @@ class Pantry {
 
 
     htmlifyKitchen(){
+      //console.log(this.item)
         return(`
         <div class="card text-center" style="width: 18rem;">
         <div class="card-body">
