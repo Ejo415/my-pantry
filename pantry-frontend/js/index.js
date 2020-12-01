@@ -15,6 +15,7 @@ function bindEventListeners(){
     const newItemForm = document.getElementById('new-item')
     const addInvButton = document.getElementById(`item-container`)
     const removeInvButton = document.getElementById(`kitchen-container`)
+    const alphItemButton = document.getElementById('az-button')
     
     addInvButton.addEventListener('click', function(e) { 
       if(e.target.classList.contains('addInvButton')){
@@ -29,6 +30,7 @@ function bindEventListeners(){
     });
     newKitchenForm.addEventListener('submit', addKitchen);
     newItemForm.addEventListener('submit', addItem);
+    alphItemButton.addEventListener('click', sortItems);
 }
 
  async function invInfo(){
@@ -60,6 +62,10 @@ async function renderItems(){
     }
     Item.renderItem()
     
+}
+
+function sortItems(){
+  Item.renderSortedItems()
 }
 
 

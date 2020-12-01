@@ -35,6 +35,28 @@ class Item{
         itemList.innerHTML = Item.htmlifyItems()
     }
 
+    static renderSortedItems(){
+      const itemList = document.getElementById("item-container") 
+      itemList.innerHTML = ""
+      itemList.innerHTML = Item.sortItems()
+    }
+
+    static sortItems(){ 
+    let sorted = Item.all.sort(function(a, b) {
+     // debugger
+    var nameA = a.item_name.toUpperCase(); // ignore upper and lowercase
+    var nameB = b.item_name.toUpperCase(); // ignore upper and lowercase
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+});
+ return sorted.map(sorted=> sorted.htmlifyItem()).join("")
+}
+
 
 
 
