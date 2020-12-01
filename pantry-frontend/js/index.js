@@ -35,7 +35,7 @@ function bindEventListeners(){
     const data = await api.getInvInfo()
     for(inv of data){
     let test =  new Inventory(inv)
-     //console.log(test)
+     console.log(test)
     }}
 
 async function renderLeftSide(){
@@ -47,7 +47,7 @@ async function renderLeftSide(){
     //  console.log(test)
     }
     Pantry.renderKitchens()
-    invInfo()
+    
     
   }
 
@@ -98,6 +98,7 @@ async function addInv(e) {
    // console.log(invData)
     const res = await api.invAdd(invData);
     //console.log(res)
+    invInfo()
     renderLeftSide()
     
 }
@@ -113,6 +114,7 @@ async function removeInv(e) {
  // console.log(sendData)
   const res = await api.invRemove(sendData);
   //console.log(res)
+  invInfo()
   renderLeftSide()
 }
 
