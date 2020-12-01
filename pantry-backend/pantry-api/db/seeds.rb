@@ -7,13 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Item.create(name: "Garlic Powder", category: "Spice",)
-Item.create(name: "Rotisserie Chicken", category: "Poultry")
-Item.create(name: "Fresh Basil", category: "Herbs")
-Item.create(name: "San Marzano Tomatoes", category: "Canned Produce")
-Item.create(name: "Table Salt", category: "Salt")
-Item.create(name: "Milk", category: "Dairy")
-Item.create(name: "Kosher Salt", category: "Salt")
+Item.create(item_name: "Garlic Powder", category: "Spice",)
+Item.create(item_name: "Rotisserie Chicken", category: "Poultry")
+Item.create(item_name: "Fresh Basil", category: "Herbs")
+Item.create(item_name: "San Marzano Tomatoes", category: "Canned Produce")
+Item.create(item_name: "Table Salt", category: "Salt")
+Item.create(item_name: "Milk", category: "Dairy")
+Item.create(item_name: "Kosher Salt", category: "Salt")
 
 Inventory.create(kitchen_id: 1 , item_id: 2)
 Inventory.create(kitchen_id: 1 , item_id: 7)
