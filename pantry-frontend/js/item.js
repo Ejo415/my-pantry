@@ -44,8 +44,8 @@ class Item{
     static sortItems(){ 
     let sorted = Item.all.sort(function(a, b) {
      // debugger
-    var nameA = a.item_name.toUpperCase(); // ignore upper and lowercase
-    var nameB = b.item_name.toUpperCase(); // ignore upper and lowercase
+    let nameA = a.item_name.toUpperCase(); // ignore upper and lowercase
+    let nameB = b.item_name.toUpperCase(); // ignore upper and lowercase
     if (nameA < nameB) {
       return -1;
     }
